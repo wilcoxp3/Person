@@ -44,5 +44,12 @@ public abstract class Person
         return email;
     }
     
+    @Override
+    public String toString()
+    {
+        return "Name: " + firstName + " " + lastName + "\n" +
+               "Email: " + email + "\n"; 
+    }
     
+    abstract String getDisplayText();
 }
