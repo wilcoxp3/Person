@@ -8,5 +8,7 @@ package personapp;
 
 public class Customer extends Person
 {
+    private String customerNumber;
+    
     
 }
