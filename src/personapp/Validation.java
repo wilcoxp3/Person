@@ -151,4 +151,34 @@ public class Validation
         }
         return answer;
     }
+    
+    public static boolean getChoice(String prompt, String choice1, String choice2)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(prompt);
+        boolean answer;
+        String choice = sc.next();
+        
+        while(true)
+        {
+            if (choice.equalsIgnoreCase(choice1))
+            {
+                answer = true;
+                break;
+            }
+            else if (choice.equalsIgnoreCase(choice2))
+            {
+                answer = false;
+                break;
+            }   
+            else
+            {
+                System.out.print("Invalid choice. Please choose '" + choice1 + 
+                        "' or '" + choice2 + "': ");
+                sc.nextLine();
+                choice = sc.next();
+            }
+        }
+        return answer;
+    }
 }
