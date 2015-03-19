@@ -1,8 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+ *  Project 8-2: Person
+ * Professor: Tedd Sperling
+ * Course: Introduction to JAVA - (22150)
+ * Student: Paul Wilcox
+ * This program enables the user to create an employee object or a customer
+ * object, each of which are subclasses of the abstract class person. 
+*/
 
 package personapp;
 import java.util.Scanner;
