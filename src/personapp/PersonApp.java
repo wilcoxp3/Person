@@ -15,9 +15,7 @@ public class PersonApp
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Welcome to the Person Tester application");
-        
-        
-        
+          
         while (true)
         {
             boolean choice = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
@@ -47,6 +45,7 @@ public class PersonApp
                 
                 person = customer;
             }
+            
             else
             {
                 System.out.print("Enter social security number: ");
@@ -63,6 +62,7 @@ public class PersonApp
             }
             
             System.out.print("\nYou entered:\n" + person.getDisplayText());
+            
             if (Validation.getContinue("\nContinue? (y/n): ") == false)
             {
                 break;
