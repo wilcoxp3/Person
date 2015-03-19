@@ -151,7 +151,15 @@ public class Validation
         }
         return answer;
     }
-    
+    /**
+     * getChoice prompts the user to enter one of two choice. Returns an error
+     * and re-prompts if neither choice is entered. Returns true if first choice
+     * selected, and false if second choice is selected.
+     * @param prompt
+     * @param choice1
+     * @param choice2
+     * @return 
+     */
     public static boolean getChoice(String prompt, String choice1, String choice2)
     {
         Scanner sc = new Scanner(System.in);
