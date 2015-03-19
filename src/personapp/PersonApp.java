@@ -4,15 +4,18 @@
  * Course: Introduction to JAVA - (22150)
  * Student: Paul Wilcox
  * This program enables the user to create an employee object or a customer
- * object, each of which are subclasses of the abstract class person. 
+ * object, each of which are subclasses of the abstract class person. It prompts
+ * the user to enter a first name, last name, and email. Then, depending on
+ * which object being created prompts for either a customer number or a social
+ * security number. It then displays the information for the created object.
 */
 
 package personapp;
+
 import java.util.Scanner;
 
 public class PersonApp
 {
-
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
@@ -21,9 +24,12 @@ public class PersonApp
           
         while (true)
         {
+            //getChoice returns true when Customer is chosen, returns false
+            //when Employee is chosen.
             boolean choice = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
             
-            Person person = null;
+            
+            Person person;
             
             System.out.print("\nEnter first name: ");
             String firstName = sc.nextLine();
