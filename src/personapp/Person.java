@@ -12,7 +12,12 @@ public abstract class Person
     private String lastName;
     private String email;
     
-    public Person() {}
+    public Person()
+    {
+        firstName = "";
+        lastName = "";
+        email = "";
+    }
     
     public void setFirstName(String firstName)
     {

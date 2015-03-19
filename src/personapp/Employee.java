@@ -10,7 +10,11 @@ public class Employee extends Person
 {
     private String socSecNum;
     
-    public Employee() {}
+    public Employee()
+    {
+        super();
+        socSecNum = "";
+    }
     
     public void setSocSecNum(String socSecNum)
     {

@@ -10,7 +10,11 @@ public class Customer extends Person
 {
     private String customerNumber;
     
-    public Customer() {}
+    public Customer()
+    {
+        super();
+        customerNumber = "";
+    }
     
     public void setCustomerNumber(String customerNumber)
     {

@@ -16,53 +16,53 @@ public class PersonApp
         
         System.out.println("Welcome to the Person Tester application");
         
+        
+        
         while (true)
         {
             boolean choice = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
             
+            Person person = null;
+            
             System.out.print("\nEnter first name: ");
-            String firstName = sc.next();
-            sc.nextLine();
+            String firstName = sc.nextLine();
             
             System.out.print("Enter last name: ");
-            String lastName = sc.next();
-            sc.nextLine();
+            String lastName = sc.nextLine();
             
             System.out.print("Enter email address: ");
-            String email = sc.next();
-            sc.nextLine();
+            String email = sc.nextLine();
             
             if (choice == true)
             {
                 System.out.print("Enter customer number: ");
-                String customerNumber = sc.next();
-                sc.nextLine();
+                String customerNumber = sc.nextLine();
                 
-                Customer firstCustomer = new Customer();
+                Customer customer = new Customer();
                 
-                firstCustomer.setFirstName(firstName);
-                firstCustomer.setLastName(lastName);
-                firstCustomer.setEmail(email);
-                firstCustomer.setCustomerNumber(customerNumber);
+                customer.setFirstName(firstName);
+                customer.setLastName(lastName);
+                customer.setEmail(email);
+                customer.setCustomerNumber(customerNumber);
                 
-                System.out.print("\nYou entered:\n" + firstCustomer.getDisplayText());
+                person = customer;
             }
             else
             {
                 System.out.print("Enter social security number: ");
-                String socSecNum = sc.next();
-                sc.nextLine();
+                String socSecNum = sc.nextLine();
                 
-                Employee firstEmployee = new Employee();
+                Employee employee = new Employee();
                 
-                firstEmployee.setFirstName(firstName);
-                firstEmployee.setLastName(lastName);
-                firstEmployee.setEmail(email);
-                firstEmployee.setSocSecNum(socSecNum);
+                employee.setFirstName(firstName);
+                employee.setLastName(lastName);
+                employee.setEmail(email);
+                employee.setSocSecNum(socSecNum);
                 
-                System.out.print("\nYou entered:\n" + firstEmployee.getDisplayText());
+                person = employee;
             }
             
+            System.out.print("\nYou entered:\n" + person.getDisplayText());
             if (Validation.getContinue("\nContinue? (y/n): ") == false)
             {
                 break;
