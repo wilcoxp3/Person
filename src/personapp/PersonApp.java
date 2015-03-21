@@ -26,11 +26,12 @@ public class PersonApp
         {
             //getChoice returns true when Customer is chosen, returns false
             //when Employee is chosen.
-            boolean choice = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
+            boolean isCustomer = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
             
+            //Declare variable of abstract type person, to be used for printing
+            Person myPerson;
             
-            Person person;
-            
+            //Get info from user common to both customers and employees
             System.out.print("\nEnter first name: ");
             String firstName = sc.nextLine();
             
@@ -40,38 +41,45 @@ public class PersonApp
             System.out.print("Enter email address: ");
             String email = sc.nextLine();
             
-            if (choice == true)
+            //isCustomer == true if user chooses to create customer
+            if (isCustomer == true)
             {
+                //get Customer Number from user
                 System.out.print("Enter customer number: ");
                 String customerNumber = sc.nextLine();
                 
-                Customer customer = new Customer();
+                //create customer object and set all fields
+                Customer myCustomer = new Customer();
+                myCustomer.setFirstName(firstName);
+                myCustomer.setLastName(lastName);
+                myCustomer.setEmail(email);
+                myCustomer.setCustomerNumber(customerNumber);
                 
-                customer.setFirstName(firstName);
-                customer.setLastName(lastName);
-                customer.setEmail(email);
-                customer.setCustomerNumber(customerNumber);
-                
-                person = customer;
+                //cast customer object  as
+                myPerson = myCustomer;
             }
             
+            //isCustomer == false if user chooses to create employee
             else
             {
+                //get employee social security
                 System.out.print("Enter social security number: ");
-                String socSecNum = sc.nextLine();
+                String empSSN = sc.nextLine();
                 
-                Employee employee = new Employee();
+                //create employee object and set all fields
+                Employee myEmployee = new Employee();
+                myEmployee.setFirstName(firstName);
+                myEmployee.setLastName(lastName);
+                myEmployee.setEmail(email);
+                myEmployee.setSocSecNum(empSSN);
                 
-                employee.setFirstName(firstName);
-                employee.setLastName(lastName);
-                employee.setEmail(email);
-                employee.setSocSecNum(socSecNum);
-                
-                person = employee;
+                myPerson = myEmployee;
             }
             
-            System.out.print("\nYou entered:\n" + person.getDisplayText());
+            //Display all info for the customer or employee object
+            System.out.print("\nYou entered:\n" + myPerson.getDisplayText());
             
+            //Prompt user to continue or quit
             if (Validation.getContinue("\nContinue? (y/n): ") == false)
             {
                 break;

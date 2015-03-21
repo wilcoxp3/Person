@@ -152,9 +152,10 @@ public class Validation
         return answer;
     }
     /**
-     * getChoice prompts the user to enter one of two choice. Returns an error
+     * getChoice prompts the user to enter one of two choices. Returns an error
      * and re-prompts if neither choice is entered. Returns true if first choice
-     * selected, and false if second choice is selected.
+     * selected, and false if second choice is selected. Choices are not case
+     * sensitive.
      * @param prompt
      * @param choice1
      * @param choice2
