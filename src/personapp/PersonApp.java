@@ -24,7 +24,7 @@ public class PersonApp
           
         while (true)
         {
-            //Declare variable of abstract type Person, to be used for printing
+            //Declare variable of type Person, to be used for printing
             Person myPerson;
             
             //getChoice returns true when Customer is chosen, returns false
