@@ -1,34 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ /**
+ * The class Employee extends the abstract class Person. It adds a field for the
+ * employee's social security number, along with a getter and a setter. The
+ * method getDisplayText is overridden to append the social security number to
+ * the string returned by the superclass's toString() method (containing first
+ * name, last name, and email address). The constructor calls the superclass's
+ * constructor, and also sets the employee social security number to an empty
+ * string.
  */
 
 package personapp;
 
 public class Employee extends Person
 {
-    private String socSecNum;
+    //instance variable for employee social security number
+    private String empSSN;
     
+    //initialize all instance variables to empty strings.
     public Employee()
     {
         super();
-        socSecNum = "";
+        empSSN = "";
     }
     
-    public void setSocSecNum(String socSecNum)
+    //getter and setter for social security number
+    public void setEmpSSN(String empSSN)
     {
-        this.socSecNum = socSecNum;
+        this.empSSN = empSSN;
     }
     
-    public String getSocSecNum()
+    public String getEmpSSN()
     {
-        return socSecNum;
+        return empSSN;
     }
     
+    //return string for displaying all info to the user
     @Override
     public String getDisplayText()
     {
-        return super.toString() + "Social security number: " + socSecNum + "\n";
+        return super.toString() + "Social security number: " + empSSN + "\n";
     }
 }

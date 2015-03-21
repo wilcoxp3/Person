@@ -1,5 +1,5 @@
 /**
- * The abstract class Person defines 3 instance variable, the person's first
+ * The abstract class Person defines three fields, the person's first
  * name, last name, and email address, along with getter and setter methods for
  * each. It overrides toString to return a string containing all three
  * fields with labels. It also declares an abstract method getDisplayText(). The
@@ -10,11 +10,12 @@ package personapp;
 
 public abstract class Person
 {
+    //instance variable for person's first name, last name, and email address
     private String firstName;
     private String lastName;
     private String email;
     
-    
+    //Constructor sets all fields to an empty string
     public Person()
     {
         firstName = "";
@@ -22,6 +23,7 @@ public abstract class Person
         email = "";
     }
     
+    //getters and setters for each field
     public void setFirstName(String firstName)
     {
         this.firstName = firstName;
@@ -52,6 +54,8 @@ public abstract class Person
         return email;
     }
     
+    //Override toString method to return a string containg the values of all
+    //fields displayed in a way that makes sense to the user.
     @Override
     public String toString()
     {
@@ -59,5 +63,6 @@ public abstract class Person
                "Email: " + email + "\n"; 
     }
     
+    //abstract method for getting the text to display to the user
     abstract String getDisplayText();
 }

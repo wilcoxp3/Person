@@ -24,14 +24,14 @@ public class PersonApp
           
         while (true)
         {
+            //Declare variable of abstract type Person, to be used for printing
+            Person myPerson;
+            
             //getChoice returns true when Customer is chosen, returns false
             //when Employee is chosen.
             boolean isCustomer = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
             
-            //Declare variable of abstract type person, to be used for printing
-            Person myPerson;
-            
-            //Get info from user common to both customers and employees
+            //Get info from user that is common to both customers and employees
             System.out.print("\nEnter first name: ");
             String firstName = sc.nextLine();
             
@@ -55,7 +55,7 @@ public class PersonApp
                 myCustomer.setEmail(email);
                 myCustomer.setCustomerNumber(customerNumber);
                 
-                //cast customer object  as
+                //cast Customer object as a Person
                 myPerson = myCustomer;
             }
             
@@ -71,8 +71,9 @@ public class PersonApp
                 myEmployee.setFirstName(firstName);
                 myEmployee.setLastName(lastName);
                 myEmployee.setEmail(email);
-                myEmployee.setSocSecNum(empSSN);
+                myEmployee.setEmpSSN(empSSN);
                 
+                //cast Employee object as a Person
                 myPerson = myEmployee;
             }
             
