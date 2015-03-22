@@ -1,5 +1,5 @@
 /**
- *  Project 8-2: Person
+ * Project 8-2: Person
  * Professor: Tedd Sperling
  * Course: Introduction to JAVA - (22150)
  * Student: Paul Wilcox
@@ -55,14 +55,14 @@ public class PersonApp
                 myCustomer.setEmail(email);
                 myCustomer.setCustomerNumber(customerNumber);
                 
-                //cast Customer object as a Person
+                //store Customer object in Person variable
                 myPerson = myCustomer;
             }
             
             //isCustomer == false if user chooses to create employee
             else
             {
-                //get employee social security
+                //get employee social security number
                 System.out.print("Enter social security number: ");
                 String empSSN = sc.nextLine();
                 
@@ -73,7 +73,7 @@ public class PersonApp
                 myEmployee.setEmail(email);
                 myEmployee.setEmpSSN(empSSN);
                 
-                //cast Employee object as a Person
+                //store Employee object in Person variable
                 myPerson = myEmployee;
             }
             

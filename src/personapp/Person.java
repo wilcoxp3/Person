@@ -10,7 +10,7 @@ package personapp;
 
 public abstract class Person
 {
-    //instance variable for person's first name, last name, and email address
+    //instance variables for person's first name, last name, and email address
     private String firstName;
     private String lastName;
     private String email;

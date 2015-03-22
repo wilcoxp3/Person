@@ -15,7 +15,7 @@ public class Customer extends Person
     //instance variable for customer's customer number
     private String customerNumber;
     
-    //initialize all instance variables to aempty strings
+    //initialize all instance variables to empty strings
     public Customer()
     {
         super();
