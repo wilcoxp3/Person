@@ -190,4 +190,17 @@ public class Validation
         }
         return answer;
     }
+    /**
+     * getString displays a prompt to the user, gets the entire line, and
+     * returns that line as a string.
+     * @param prompt
+     * @return
+     */
+    public static String getString(String prompt)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(prompt);
+        String userString = sc.nextLine();
+        return userString;
+    }
 }

@@ -32,21 +32,15 @@ public class PersonApp
             boolean isCustomer = Validation.getChoice("\nCreate customer or employee? (c/e): ", "C", "E");
             
             //Get info from user that is common to both customers and employees
-            System.out.print("\nEnter first name: ");
-            String firstName = sc.nextLine();
-            
-            System.out.print("Enter last name: ");
-            String lastName = sc.nextLine();
-            
-            System.out.print("Enter email address: ");
-            String email = sc.nextLine();
+            String firstName = Validation.getString("\nEnter first name: ");
+            String lastName = Validation.getString("Enter last name: ");
+            String email = Validation.getString("Enter email address: ");
             
             //isCustomer == true if user chooses to create customer
             if (isCustomer == true)
             {
                 //get Customer Number from user
-                System.out.print("Enter customer number: ");
-                String customerNumber = sc.nextLine();
+                String customerNumber = Validation.getString("Enter customer number: ");
                 
                 //create customer object and set all fields
                 Customer myCustomer = new Customer();
@@ -63,8 +57,7 @@ public class PersonApp
             else
             {
                 //get employee social security number
-                System.out.print("Enter social security number: ");
-                String empSSN = sc.nextLine();
+                String empSSN = Validation.getString("Enter social security number: ");
                 
                 //create employee object and set all fields
                 Employee myEmployee = new Employee();
